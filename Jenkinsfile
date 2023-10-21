@@ -19,7 +19,7 @@ pipeline{
     }  
    } 
     post{
-      failure {
+      success {
           echo "something wrong"
       }
         
