@@ -1,7 +1,13 @@
+CODE_CHANGES = getGitChanges()
 pipeline{
   agent any
   stages{
     stage("build"){
+       when {
+        expression{
+          CODE_CHANGES == true
+        }
+      }
       steps{
          echo "build application"
       } 
